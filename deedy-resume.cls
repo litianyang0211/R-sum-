@@ -9,7 +9,18 @@
 \LoadClass{article}
 
 \usepackage[hmargin=1.25cm, vmargin=0.75cm]{geometry} % Specifies horizontal and vertical page margins
+\usepackage[usenames,dvipsnames]{xcolor}
 \usepackage{hyperref} % Required for links
+\usepackage{titlesec}
+\usepackage[absolute]{textpos}
+\usepackage[UKenglish]{babel}
+\usepackage[UKenglish]{isodate}
+\usepackage{fontspec,xltxtra,xunicode}
+\usepackage[UTF8, scheme=plain, punct=plain, zihao=false]{ctex}
+\setCJKfamilyfont{hwk}{STKaiti}
+\usepackage{graphicx}
+\usepackage{tikz}
+\usetikzlibrary{calc}
 
 %----------------------------------------------------------------------------------------
 %	COLORS
@@ -28,9 +39,10 @@
 
 \usepackage{fontspec} % Required for specifying custom fonts in XeLaTeX
 
-\setmainfont[Color=primary, Path = fonts/lato/,BoldItalicFont=Lato-RegIta,BoldFont=Lato-Reg,ItalicFont=Lato-LigIta]{Lato-Lig} % The primary font for content text; defines bold, italic and bold-italic as well
-
-\setsansfont[Scale=MatchLowercase,Mapping=tex-text, Path = fonts/raleway/]{Raleway-ExtraLight} % The font used where \sfffamily is called
+\defaultfontfeatures{Mapping=tex-text}
+\setmainfont[Color=primary, Path = fonts/lato/]{Lato-Lig}
+\setsansfont[Scale=MatchLowercase,Mapping=tex-text, Path = fonts/raleway/]{Raleway-ExtraLight}
+\newcommand{\custombold}[1]{\color{subheadings}\fontspec[Path = fonts/lato/]{Lato-Reg}\selectfont #1 \normalfont}
 
 %----------------------------------------------------------------------------------------
 %	LAST UPDATED COMMAND
